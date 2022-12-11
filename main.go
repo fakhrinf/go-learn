@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // variable declaration
 // var message string
@@ -42,10 +45,27 @@ func main() {
     }
 
     // create greetings from another file with custom type
-    greetAgain := greetings{"Whaaaaats up brooo!"}
+	// continuing with more function and chaining it
+	// also create function that return multiple value
+	// its like and array after being exploded that save in a list
+    greetAgain := greetings{}.generate(5)
 
+	begining, ending := greetAgain.split(3)
+
+	fmt.Println(strings.Join(begining, ", "))
+	fmt.Println(strings.Join(ending, ", "))
+
+	greetAgain = greetAgain.from(2).limit(3)
+
+	// save greetings into text file
+	greetAgain.save("greetings.txt")
     // call function to print
     greetAgain.cetak()
+
+	greetFile, _ := load("greetings.txt")
+	// cetak using println
+	// and load function are imploded with \n glue
+	greetFile.cetak()
 }
 
 // function declaration with return type
