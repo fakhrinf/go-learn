@@ -57,8 +57,7 @@ func (g greetings) save(filename string) error {
 func load(filename string) (greetings, error) {
 	data, error := ioutil.ReadFile(filename)
 
-	result := greetings{}
-	result = greetings(strings.SplitAfter(string(data), "\n"))
+	result := greetings(strings.SplitAfter(string(data), "\n"))
 
 	return result, error
 }
