@@ -1,0 +1,4 @@
+vscode:
+  extentions:
+    - golang.go
+    - eamodio.gitlens
