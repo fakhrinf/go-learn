@@ -1,4 +1,4 @@
 vscode:
-  extenstions:
+  extensions:
     - golang.go
     - eamodio.gitlens
