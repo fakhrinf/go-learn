@@ -53,6 +53,7 @@ func hello() string {
 	return "Hello go from function!"
 }
 
+// functio with parameter
 func sayWhat(message string) {
 	fmt.Println(message)
 }
