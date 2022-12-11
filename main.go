@@ -19,26 +19,40 @@ func main() {
 	// replace variable value by function
 	message = hello()
 
+	// print message using parameter
+	sayWhat("say something using parameter")
+
+	// print message into console
 	fmt.Println(message)
 
 	// slices (array without specify the length)
-	greetings := []string{"Hello", "Hi", "ola", "sup!"}
+	_greetings := []string{"Hello", "Hi", "ola", "sup!"}
 
 	// for loop
-	for i := 0; i < len(greetings); i++ {
-		fmt.Println(greetings[i])
+	for i := 0; i < len(_greetings); i++ {
+		fmt.Println(_greetings[i])
 	}
 
 	// add data into slices
-	greetings = append(greetings, "OI")
+	_greetings = append(_greetings, "OI")
 
 	// for loop with range
-	for _, greet := range greetings {
+	for _, greet := range _greetings {
 		fmt.Println(greet)
 	}
+
+	// create greetings from another file with custom type
+	greetAgain := greetings{"Whaaaaats up brooo!"}
+
+	// call function to print
+	greetAgain.cetak()
 }
 
 // function declaration with return type
 func hello() string {
 	return "Hello go from function!"
+}
+
+func sayWhat(message string) {
+	fmt.Println(message)
 }
