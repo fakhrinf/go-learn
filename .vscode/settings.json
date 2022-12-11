@@ -1,4 +1,5 @@
 {
     "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.preferredLightColorTheme": "Visual Studio Dark"
+    "workbench.preferredLightColorTheme": "Visual Studio Dark",
+    "editor.detectIndentation": false
 }
