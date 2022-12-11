@@ -20,6 +20,22 @@ func main() {
 	message = hello()
 
 	fmt.Println(message)
+
+	// slices (array without specify the length)
+	greetings := []string{"Hello", "Hi", "ola", "sup!"}
+
+	// for loop
+	for i := 0; i < len(greetings); i++ {
+		fmt.Println(greetings[i])
+	}
+
+	// add data into slices
+	greetings = append(greetings, "OI")
+
+	// for loop with range
+	for _, greet := range greetings {
+		fmt.Println(greet)
+	}
 }
 
 // function declaration with return type
